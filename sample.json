@@ -1,0 +1,62 @@
+{
+    "16": [
+        "iphone 16",
+        "70000",
+        "static/uploads/iphone 16.jpg"
+    ],
+    "26": [
+        "samsung S26 ultra",
+        "1,10,000",
+        "static/uploads/s26 ultra.jpg"
+    ],
+    "s25": [
+        "samsung s25 ultra",
+        "90000",
+        "static/uploads/s25 ultra.jpg"
+    ],
+    "15": [
+        "iphone 15",
+        "60000",
+        "static/uploads/iphone 15.jpg"
+    ],
+    "25": [
+        "samsung s25",
+        "60000",
+        "static/uploads/s25.jpg"
+    ],
+    "25w": [
+        "samsung charger",
+        "1500",
+        "static/uploads/samsung cahrger.jpg"
+    ],
+    "16C": [
+        "iphone 16 case",
+        "2500",
+        "static/uploads/16 case.jpg"
+    ],
+    "5pod": [
+        "Air Pods Pro",
+        "25000",
+        "static/uploads/airpods.jpg"
+    ],
+    "2max": [
+        "Apple Max 2",
+        "35000",
+        "static/uploads/apple max 2.jpg"
+    ],
+    "5ps": [
+        "PS5",
+        "60000",
+        "static/uploads/ps5.jpg"
+    ],
+    "2": [
+        "Spider-Man 2",
+        "1500",
+        "static/uploads/spiderman ps5.jpg"
+    ],
+    "17": [
+        "Iphone 17 Pro",
+        "90000",
+        "static/uploads/iphone 17 pro.jpg"
+    ]
+}

@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar"> 
+         <!-- <img src="" alt="smartmart"> -->
+         <h2 style="color: #2563eb;">SmartMart</h2>
+         <button id="cart_control" onclick="window.location.href='/cart'">Cart Control</button>
+    </div>
+    <div class="search_bar">
+      <input type="text" id="search_input" placeholder="search products">
+        <button id="search_btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        </button>
+    </div>
+    <div class="products_grid" id="products_grid">
+      
+    </div>
+   
+    <footer>
+        <h6 id="adminaccess">Admin Access</h6>
+    </footer>
+
+
+
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+    <script src="{{url_for('static',filename='cart.js')}}"></script>
+
+</body>
+</html>

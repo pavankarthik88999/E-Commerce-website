@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        background-color: #f4f5f7;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        color: #333;
+    }
+
+    h2 {
+        text-align: center;
+        color: #111;
+        margin-bottom: 20px;
+    }
+
+    .logblock {
+        background-color: #ffffff;
+        width: 320px;
+        border: 1px solid #f0f0f0;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.05); 
+        border-radius: 16px;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+    }
+
+    /* Style the text inside the form */
+    .logblock {
+        font-size: 14px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    #admin_user_name,
+    #admin_password {
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        background-color: #f9f9f9;
+        font-size: 14px;
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px; /* Spacing between label and input */
+        transition: 0.2s;
+    }
+
+    #admin_user_name:focus,
+    #admin_password:focus {
+        background-color: #ffffff;
+        border-color: #2563eb;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    #admin_login {
+        background-color: #2563eb;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        width: 100%;
+        margin-top: 15px;
+        transition: 0.2s;
+    }
+
+    #admin_login:hover {
+        background-color: #1d4ed8;
+    }
+</style>
+</head>
+<body>
+    <h2>ADMIN LOGIN</h2>
+    <center>
+    <form class="logblock" id="login_form" method="post" >
+        <!-- <h3>Admin Login</h3> -->
+        user_name: <input type="text" id="admin_user_name" placeholder="username">
+        Password:  <input type="password" id="admin_password" placeholder="password">
+        <!-- <button id="admin_login">login</button> -->
+        <input type="submit" value="login" id="admin_login">
+    </form>
+    </center>
+
+    <script>
+        const loginForm = document.getElementById('login_form');
+        loginForm.addEventListener('submit',function(event){
+            event.preventDefault();
+            
+        fetch('adminlog',{
+            method:'POST',
+            headers:{
+                 'Content-Type': 'application/json'
+            },
+            body:JSON.stringify({
+                'admin_user_name':document.getElementById('admin_user_name').value,
+                'admin_password':document.getElementById('admin_password').value
+            })
+
+        })
+        .then(response=>{
+            if(!response.ok){
+                throw new Error('INVALID USER');
+            }
+            return response.json();
+        })
+        .then(data=>{
+            window.location.href='admin.html';
+        })
+        .catch(error=>{
+            console.error('error',error);
+            alert('INVALID USER');
+        });
+    });
+    </script>
+
+
+    
+</body>
+</html>

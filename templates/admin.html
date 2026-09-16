@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='adminstyle.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="admin_page">
+        <h1>ADMIN PAGE</h1>
+    </div>
+    <div class="class_container">
+
+        <div class="card">
+        <h2>ADD PRODUCT</h2>
+        <label for="product_id">Product_id:</label>
+        <input type="text" id="product_id" placeholder="product_id">
+
+        <label for="product_name">Name:</label>
+        <input type="text" id="product_name" placeholder="product_name">
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" placeholder="product_price">
+        <label for="product_img">Image file:</label>
+        <input type="file" id="product_img" accept="image/*">
+
+        <button id="add_product">add_product</button>
+    </div>
+
+    <!-- REMOVE PRODUCT CARD -->
+    <div class="card">
+        <h2>Remove Product</h2>
+        <input type="text" id="remove_p_id" placeholder="Product ID to remove">
+        <button id="remove_product_btn">Delete Product</button>
+    </div>
+    </div>
+    <script src="{{url_for('static',filename='admin.js')}}"></script>
+</body>
+</html>

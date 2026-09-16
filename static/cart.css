@@ -1,0 +1,83 @@
+body {
+    background-color: #f4f5f7; /* Very light gray background to make the white cart pop */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.cart-container {
+    background-color: #fff;
+    margin: 40px auto; 
+    padding: 30px;
+    border-radius: 16px; /* Matches home page card rounding */
+    width: 60%;
+    min-width: 400px;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.04); /* Very soft shadow */
+}
+
+.back-btn {
+    background-color: transparent;
+    color: #333;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    color: #1a56db;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px dashed #e0e0e0; /* Dashed divider typical of modern checkout pages */
+}
+
+.cart-item button {
+    background-color: #fff;
+    color: #1a56db; /* Vivid blue to match the '+' icons in the screenshot */
+    border: 1px solid #d2e3fc;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.cart-item button:hover {
+    background-color: #f3f8ff;
+}
+
+.cart-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 24px;
+    padding-top: 20px;
+}
+
+.cart-footer h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#checkout_btn {
+    background-color: #2563eb; /* Vivid solid blue matching the bottom bar in your screenshot */
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%; /* Stretches across the bottom for a modern app feel */
+    transition: 0.2s;
+}
+
+#checkout_btn:hover {
+    background-color: #1d4ed8;
+}
